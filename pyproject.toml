@@ -4,12 +4,13 @@ version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-packages = [{include = "finm_25000_homework_1"}]
+packages = [{include = "connector.py"}] 
 
 [tool.poetry.dependencies]
 python = "^3.13"
 requests = "^2.34.2"
 dotenv = "^0.9.9"
+pytest = "^9.1.1"
 
 
 [build-system]

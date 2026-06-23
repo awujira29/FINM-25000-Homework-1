@@ -37,3 +37,6 @@ def get_bars(symbol, timeframe="5Min", days=30, feed='iex'):
             break
     return bars
 
+
+
+    
