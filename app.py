@@ -42,6 +42,12 @@ def plot_candles(df, symbol):
         height=450,
         margin=dict(l=10, r=10, t=40, b=10),
     )
+    fig.update_xaxes(
+        rangebreaks=[
+            dict(bounds=["sat", "mon"]),              # hide weekends
+            dict(bounds=[16, 9.5], pattern="hour"),   # hide 4pm–9:30am overnight
+        ]
+    )
     return fig
 
 
