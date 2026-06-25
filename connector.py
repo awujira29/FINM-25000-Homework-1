@@ -57,4 +57,6 @@ def get_latest_trade(symbol, feed="iex"):
 
 
 if __name__ == "__main__":
-    print(get_latest_trade("AAPL"))
+    bars = get_bars('AAPL', '1Min')
+    print(bars[0])
+    print(bars[77])
