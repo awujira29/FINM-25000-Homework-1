@@ -21,7 +21,8 @@ def bars_to_df(bars):
     df = pd.DataFrame(bars)
     if df.empty:
         return df
-    df["t"] = pd.to_datetime(df["t"])
+    df["t"] = pd.to_datetime(df["t"], utc=True)
+    df["t"] = df["t"].dt.tz_convert("America/New_York")
     df = df.set_index("t")
     df = df.rename(columns={
         "o": "Open", "h": "High", "l": "Low", "c": "Close", "v": "Volume"
