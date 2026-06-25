@@ -37,6 +37,17 @@ def get_bars(symbol, timeframe="5Min", days=30, feed='iex'):
             break
     return bars
 
+def get_latest_quote(symbol, feed="iex"):
+    r = requests.get(f"{Base}/{symbol}/quotes/latest", headers=HEADERS, 
+                     params={"feed":feed})
+    r.raise_for_status()
+    data = r.json()
+    quote= data["quote"]
 
+    return {"bid": quote["bp"], "ask": quote["ap"]} 
 
-    
+def get_latest_trade(symbol, ):
+    pass
+
+if __name__ == "__main__":
+    print(get_latest_quote("AAPL"))
