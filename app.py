@@ -14,7 +14,7 @@ import plotly.graph_objects as go
 import connector
 
 st.set_page_config(page_title="Mini Market Data Terminal", layout="wide")
-st.title("📈 Mini Market Data Terminal")
+st.title("Mini Market Data Terminal")
 
 
 def bars_to_df(bars):
