@@ -46,8 +46,15 @@ def get_latest_quote(symbol, feed="iex"):
 
     return {"bid": quote["bp"], "ask": quote["ap"]} 
 
-def get_latest_trade(symbol, ):
-    pass
+def get_latest_trade(symbol, feed="iex"):
+    r = requests.get(f"{Base}/{symbol}/trades/latest", headers=HEADERS, 
+                     params={"feed":feed})
+    r.raise_for_status()
+    data = r.json()
+    trade = data["trade"]
+
+    return {"price": trade['p']}
+
 
 if __name__ == "__main__":
-    print(get_latest_quote("AAPL"))
+    print(get_latest_trade("AAPL"))
