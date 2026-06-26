@@ -28,3 +28,6 @@ ALPACA_SECRET_KEY=your_secret_key_here
 ```
 
 Each teammate uses their own keys. The `.env` file is gitignored and should never be committed.
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4641072b-1750-406b-9dd0-bff8f766619f" />
