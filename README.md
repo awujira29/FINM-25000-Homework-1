@@ -7,7 +7,7 @@ This project uses [Poetry](https://python-poetry.org/) for dependency management
 1. Clone the repo and install dependencies:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/awujira29/FINM-25000-Homework-1
 cd FINM-25000-Homework-1
 poetry install
 ```
