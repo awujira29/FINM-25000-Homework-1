@@ -1,4 +1,9 @@
-# FINM-25000-Homework-1
+#FINM-25000-Homework-1
+
+
+A small trading terminal built on Alpaca's Market Data API. It pulls historical OHLCV bars, polls live bid/ask quotes, and displays everything in a Streamlit UI. Built for FINM-25000 Homework 1.
+
+![Mini Market Data Terminal](screenshots/terminal.png)
 
 ## Setup
 
@@ -6,7 +11,7 @@ This project uses [Poetry](https://python-poetry.org/) for dependency management
 
 1. Clone the repo and install dependencies:
 
-```bash
+```
 git clone https://github.com/awujira29/FINM-25000-Homework-1
 cd FINM-25000-Homework-1
 poetry install
@@ -16,7 +21,7 @@ poetry install
 
 3. Create a `.env` file in the project root from the template:
 
-```bash
+```
 cp .env.example .env
 ```
 
@@ -29,5 +34,16 @@ ALPACA_SECRET_KEY=your_secret_key_here
 
 Each teammate uses their own keys. The `.env` file is gitignored and should never be committed.
 
+## Running it
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4641072b-1750-406b-9dd0-bff8f766619f" />
+```
+poetry run streamlit run app.py
+```
+
+## Screenshots
+
+![Real-time quotes](screenshots/quotes.png)
+
+![Historical candlestick chart](screenshots/chart.png)
+
+![Raw OHLCV table](screenshots/ohlcv-table.png)
